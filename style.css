@@ -1,0 +1,288 @@
+:root {
+    --color-primary: #20201f;/*background*/ 
+    --color-primary-dark: #181816;
+    --color-primary-light: #292927;
+    --color-primary-light-light: #474747;
+    --color-primary-light-light-light: #b6b6b6;
+    --color-secondary: #333533;
+    --color-secondary-light: #;
+    /* --color-tertiary: #f5cb5c; */
+    /* --color-tertiary: #3945f1; */
+    /* --color-tertiary: #b9f4f8; */
+    --color-tertiary-palid: #f7d57c;
+    --color-fourth: #cfdbd5;
+    --color-fourth-light: #e8eddf;
+    --color-light: #ffffff;
+    --color-dark: #171614;
+    --color-dark-light: #242424;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Bebas Neue', cursive;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    overflow-x: hidden;
+    background: linear-gradient(
+        to right,
+        var(--color-primary-dark) 0%,
+        var(--color-primary) 40%,
+        var(--color-primary) 70%,
+        var(--color-primary-dark) 100%
+    );
+}
+
+
+
+.firstcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding-top: 5rem;
+    height: 100vh;
+    width: 100vw;
+}
+
+.homeandcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: var(--color-primary);
+    border: 1px var(--color-primary-dark) solid;
+    border-radius: 50%;
+}
+
+.home a {
+    color: var(--color-primary-light-light-light);
+}
+
+.main-console {
+    padding: 0;
+    position: relative;
+    background-color: var(--color-primary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    max-height: 32rem;
+    max-width: 32rem;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.second-console {
+    position: absolute;
+    background: linear-gradient(
+        to top right,
+        var(--color-primary) 0%,
+        var(--color-primary) 50%,
+        var(--color-primary-light) 90%,
+        var(--color-primary-light) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 13rem;
+    width: 13rem;
+    z-index: 1;
+    border: 0.6rem var(--color-primary-light) solid;
+}
+
+.second-console img {
+    margin: -1px;
+    border: 3px black solid;
+    border-radius: 50%;
+    opacity: 1;
+    height: auto;
+    width: 11rem;
+}
+
+.console-options {
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.top-left{
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    height: 16,06rem;
+    width: 16,06rem;
+}
+.top-right{
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 0%;
+    height: 16,06rem;
+    width: 16,06rem;
+}
+.bottom-right{
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 100%;
+    height: 16,06rem;
+    width: 16,06rem;
+}
+.bottom-left{
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    height: 16rem;
+    width: 16rem;
+}
+
+.end {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-top: 7rem;
+    padding-right: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--color-primary-light-light);
+} 
+
+.logo .firstname {
+    color: var(--color-primary-light-light-light);
+    padding-right: 0.2rem;
+}
+
+.navitems {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 100px;
+}
+
+.navitems li {
+    list-style: none;
+}
+
+.navitems li a {
+    text-decoration: none;
+    color: var(--color-light);
+    letter-spacing: 2px;
+    font-family: var(--font-secondary);
+}
+
+
+
+
+
+
+/* HOVER ELEMENTS starts here */
+
+.home:hover {
+    background-color: var(--color-primary-dark);
+    transition: all 400ms;
+    border: 1px var(--color-tertiary) solid;
+}
+
+.second-console:hover {
+    border: 0.3rem var(--color-tertiary) solid;
+    transition: 0.5s;
+}
+.top-left:hover {
+    border-top: 3px var(--color-tertiary) solid;
+    border-left: 3px var(--color-tertiary) solid;
+    transition: 0.3s;
+    border-bottom: 1px var(--color-tertiary) solid;
+    border-right: 1px var(--color-tertiary) solid;
+    background: linear-gradient(
+        to bottom right,
+        var(--color-primary-dark) 0%,
+        var(--color-primary-dark) 30%,
+        var(--color-primary) 60%,
+        var(--color-primary) 100%
+    );
+}
+.top-right:hover {
+    border-top: 2px var(--color-tertiary) solid;
+    border-right: 2px var(--color-tertiary) solid;
+    transition: 0.3s;
+    border-bottom: 1px var(--color-tertiary) solid;
+    border-left: 1px var(--color-tertiary) solid;
+    background: linear-gradient(
+        to bottom left,
+        var(--color-primary-dark) 0%,
+        var(--color-primary-dark) 30%,
+        var(--color-primary) 60%,
+        var(--color-primary) 100%
+    );
+}
+.bottom-right:hover {
+    border-bottom: 3px var(--color-tertiary) solid;
+    border-right: 3px var(--color-tertiary) solid;
+    transition: 0.3s;
+    border-top: 1px var(--color-tertiary) solid;
+    border-left: 1px var(--color-tertiary) solid;
+    background: linear-gradient(
+        to top left,
+        var(--color-primary-dark) 0%,
+        var(--color-primary-dark) 30%,
+        var(--color-primary) 60%,
+        var(--color-primary) 100%
+    );
+}
+.bottom-left:hover {
+    border-bottom: 3px var(--color-tertiary) solid;
+    border-left: 3px var(--color-tertiary) solid;
+    transition: 0.3s;
+    border-top: 1px var(--color-tertiary) solid;
+    border-right: 1px var(--color-tertiary) solid;
+    background: linear-gradient(
+        to top right,
+        var(--color-primary-dark) 0%,
+        var(--color-primary-dark) 30%,
+        var(--color-primary) 60%,
+        var(--color-primary) 100%
+    );
+}
+
+.navelements .navlist .navitems li a:hover {
+    font-weight: 600;
+}
+
+
+
+/* HOVER ELEMENTS ends here */
+
+
